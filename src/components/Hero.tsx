@@ -121,10 +121,10 @@ export function Hero() {
             bootDone ? "opacity-100" : "opacity-0"
           }`}
         >
-          {bootDone && <Scramble text="ALEX" />}
+          {bootDone && <Scramble text="VIDUSAHAN" />}
           <br />
           <span className="text-gradient">
-            {bootDone && <Scramble text="MORGAN." />}
+            {bootDone && <Scramble text="PERERA." />}
           </span>
         </h1>
 
