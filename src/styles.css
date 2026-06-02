@@ -141,10 +141,11 @@
   opacity: 0.35;
 }
 
-/* Cursor: hide native on desktop */
+/* Cursor: hide native cursor on all elements on desktop */
 @media (hover: hover) and (pointer: fine) {
-  body { cursor: none; }
-  a, button, [role="button"], input, textarea { cursor: none; }
+  *, *::before, *::after {
+    cursor: none !important;
+  }
 }
 
 .scanlines {
