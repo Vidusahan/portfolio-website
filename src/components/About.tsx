@@ -4,10 +4,10 @@ import { SectionLabel } from "./SectionLabel";
 import { Reveal } from "./Reveal";
 
 const STATS = [
-  { value: 60, suffix: "+", label: "Projects Delivered" },
-  { value: 35, suffix: "+", label: "Models Deployed" },
-  { value: 6, suffix: "+", label: "Years Experience" },
-  { value: 120, suffix: "+", label: "Automations Built" },
+  { value: 10, suffix: "+", label: "Projects Delivered" },
+  { value: 5, suffix: "+", label: "Models Deployed" },
+  { value: 2, suffix: "+", label: "Years Experience" },
+  { value: 50, suffix: "+", label: "Automations Built" },
 ];
 
 const TICKER = ["LangGraph", "Kubernetes", "Terraform", "MLflow", "FastAPI", "OpenAI", "Pinecone", "Airflow", "Docker", "AWS", "TensorFlow", "n8n", "BentoML", "DVC"];
@@ -49,7 +49,7 @@ export function About() {
         <SectionLabel
           number="01"
           title="ABOUT"
-          kicker={<>The intersection of intelligence and infrastructure — where research meets production.</>}
+          kicker={<>Building intelligent systems where AI research meets scalable engineering.</>}
         />
 
         <div className="grid gap-16 lg:grid-cols-[400px_1fr] lg:gap-24">
@@ -59,7 +59,7 @@ export function About() {
               <div className="relative h-72 w-72 overflow-hidden rounded-full border-2 border-cyan/40 bg-surface">
                 <div className="absolute inset-0 grid-bg opacity-50" />
                 <div className="flex h-full w-full items-center justify-center font-display text-8xl font-bold text-gradient">
-                  AM
+                  VP
                 </div>
               </div>
               <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-green/40 bg-background px-4 py-1.5 font-mono text-[10px] uppercase tracking-widest text-green">
@@ -72,19 +72,15 @@ export function About() {
           <div className="space-y-8">
             <Reveal delay={100}>
               <p className="text-2xl leading-relaxed text-foreground md:text-3xl">
-                I architect <span className="text-cyan">LLM-powered agents</span>, ship{" "}
-                <span className="text-violet">cloud-native ML systems</span>, and engineer{" "}
-                <span className="text-amber">end-to-end MLOps</span> pipelines that turn research
-                into production-grade infrastructure.
+                I build <span className="text-cyan">AI-powered applications</span>, develop{" "}
+                <span className="text-violet">NLP solutions</span>, and engineer{" "}
+                <span className="text-amber">MLOps workflows</span> that transform machine learning
+                ideas into production-ready systems. My focus spans Large Language Models (LLMs), RAG architectures, LangChain, automation, and cloud-native infrastructure, creating solutions that are both intelligent and scalable.
               </p>
             </Reveal>
             <Reveal delay={200}>
               <p className="text-base leading-relaxed text-muted-foreground md:text-lg">
-                Six years deep in the trenches between data science and platform engineering. I've
-                wired multi-agent orchestration into Fortune-500 workflows, scaled inference clusters
-                across Kubernetes, and reduced model deployment cycles from weeks to hours. My work
-                lives where the model meets the metal — CI/CD for ML, observable agents, and the
-                quiet automations no one notices because they just work.
+                As a Computer Science undergraduate and aspiring AI Engineer, I am passionate about bridging the gap between research and real-world deployment. I enjoy designing end-to-end AI systems, experimenting with NLP and generative AI technologies, and implementing DevOps and MLOps practices that enable reliable, efficient, and scalable machine learning solutions. Beyond technical development, I actively contribute to the technology community through IEEE, fostering innovation, collaboration, and continuous learning.
               </p>
             </Reveal>
           </div>

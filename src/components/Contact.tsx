@@ -34,27 +34,26 @@ export function Contact() {
             <div className="space-y-8">
               <div>
                 <div className="font-mono text-xs uppercase tracking-widest text-muted-foreground">Email</div>
-                <a href="mailto:alex@morgan.dev" className="mt-2 block font-display text-2xl font-bold hover:text-cyan md:text-3xl">
-                  alex@morgan.dev
+                <a href="mailto:vidusahanperera31@gmail.com" className="mt-2 block font-display text-2xl font-bold hover:text-cyan md:text-3xl">
+                  vidusahanperera31@gmail.com
                 </a>
               </div>
               <div>
                 <div className="font-mono text-xs uppercase tracking-widest text-muted-foreground">Location</div>
                 <div className="mt-2 flex items-center gap-2 font-display text-2xl font-bold md:text-3xl">
                   <MapPin className="h-5 w-5 text-cyan" />
-                  Berlin · Remote
+                  Jaela, Sri Lanka
                 </div>
               </div>
               <div>
                 <div className="font-mono text-xs uppercase tracking-widest text-muted-foreground mb-4">Find me</div>
                 <div className="flex flex-wrap gap-3">
                   {[
-                    { Icon: Github, label: "GitHub" },
-                    { Icon: Linkedin, label: "LinkedIn" },
-                    { Icon: Twitter, label: "Twitter" },
-                    { Icon: Mail, label: "Email" },
-                  ].map(({ Icon, label }) => (
-                    <a key={label} href="#" className="glass group flex items-center gap-2 rounded-full px-4 py-2 font-mono text-xs uppercase tracking-widest hover:border-cyan/40 hover:text-cyan">
+                    { Icon: Github, label: "GitHub", href: "https://github.com/Vidusahan" },
+                    { Icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com/in/vidusahan-perera-9738681b1" },
+                    { Icon: Mail, label: "Email", href: "mailto:vidusahanperera31@gmail.com" },
+                  ].map(({ Icon, label, href }) => (
+                    <a key={label} href={href} target={href.startsWith("http") ? "_blank" : undefined} rel={href.startsWith("http") ? "noopener noreferrer" : undefined} className="glass group flex items-center gap-2 rounded-full px-4 py-2 font-mono text-xs uppercase tracking-widest hover:border-cyan/40 hover:text-cyan">
                       <Icon className="h-4 w-4" />
                       {label}
                     </a>
@@ -65,10 +64,10 @@ export function Contact() {
               <div className="glass rounded-2xl p-6">
                 <div className="font-mono text-[11px] text-green">
                   <span className="mr-2 inline-block h-2 w-2 rounded-full bg-green animate-pulse" />
-                  AVAILABLE Q1 2026
+                  OPEN TO OPPORTUNITIES
                 </div>
                 <p className="mt-3 text-sm text-muted-foreground">
-                  Currently booking new client engagements: AI/MLOps platform builds, agentic systems, and cloud-native ML strategy.
+                  Currently open to new opportunities, collaborations, and projects in AI, ML, and Software Engineering.
                 </p>
               </div>
             </div>

@@ -8,7 +8,7 @@ const links = [
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
   { label: "Experience", href: "#experience" },
-  { label: "Writing", href: "#writing" },
+  { label: "Education", href: "#education" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -32,7 +32,7 @@ export function Navbar() {
         <nav className="mx-auto flex max-w-[1400px] items-center justify-between px-6 md:px-10">
           <a href="#top" className="font-mono text-sm md:text-base">
             <span className="text-muted-foreground">{"{ "}</span>
-            <span className="text-foreground">alex.dev</span>
+            <span className="text-foreground">vidusahan.dev</span>
             <span className="cursor-blink text-cyan">_</span>
             <span className="text-muted-foreground">{" }"}</span>
           </a>

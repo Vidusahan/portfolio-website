@@ -7,12 +7,9 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const FEATURED = [
-  { n: "01", emoji: "🤖", title: "AgentFlow", desc: "Multi-agent LLM orchestration platform using LangGraph + RAG with persistent memory and tool-routing.", stack: ["LangGraph", "Python", "Pinecone", "FastAPI"], impact: "Reduced agent latency by 58%", color: "violet" },
-  { n: "02", emoji: "🔁", title: "AutoPipeline", desc: "End-to-end ML pipeline with Airflow + MLflow + DVC. Automated retraining triggered by data drift.", stack: ["Airflow", "MLflow", "DVC", "Docker"], impact: "Cut model refresh from 5d → 4h", color: "amber" },
-  { n: "03", emoji: "☁️", title: "CloudDeploy Kit", desc: "Terraform + GitHub Actions IaC automation. One-command AWS environment provisioning for ML teams.", stack: ["Terraform", "AWS", "GitHub Actions"], impact: "Reduced deployment time by 70%", color: "sky" },
-  { n: "04", emoji: "📊", title: "ModelWatch", desc: "Real-time model monitoring dashboard with drift detection, latency histograms, and Slack alerts.", stack: ["FastAPI", "Grafana", "Prometheus"], impact: "Detected drift 12d earlier", color: "pink" },
-  { n: "05", emoji: "🧠", title: "DocuMind", desc: "Intelligent document Q&A using RAG. Semantic chunking, hybrid retrieval, and source-cited answers.", stack: ["OpenAI", "Pinecone", "LangChain"], impact: "94% answer accuracy", color: "cyan" },
-  { n: "06", emoji: "🐳", title: "K8s ML Operator", desc: "Custom Kubernetes operator for auto-scaling ML inference workloads based on GPU utilization.", stack: ["Go", "Kubernetes", "Helm"], impact: "Cut GPU costs by 42%", color: "green" },
+  { n: "01", emoji: "🤖", title: "Job Alert Bot", desc: "An intelligent job monitoring system that automatically tracks new job postings from multiple sources and delivers real-time notifications based on user-defined preferences and keywords.", stack: ["Python", "Web Scraping", "APIs", "Automation"], impact: "Automated daily monitoring", color: "violet", github: "https://github.com/Vidusahan/job-alert-bot" },
+  { n: "02", emoji: "👋", title: "Sign Language to Text", desc: "A computer vision application that recognizes sign language gestures in real time and converts them into readable text, improving communication accessibility through AI-powered gesture recognition.", stack: ["Python", "OpenCV", "TensorFlow", "Computer Vision"], impact: "Live camera processing", color: "amber", github: "https://github.com/Vidusahan/Real-time-Sign-Language-to-Text-Conversion" },
+  { n: "03", emoji: "🩺", title: "AI Medical Assistant", desc: "An AI-powered healthcare assistant that analyzes symptoms and provides preliminary diagnostic insights using machine learning and natural language processing techniques.", stack: ["Python", "Machine Learning", "NLP", "Scikit-learn"], impact: "Symptom-based diagnostics", color: "sky", github: "https://github.com/Vidusahan/ai-medical-diagnosis-assistant" },
 ];
 
 const COLOR: Record<string, string> = {
@@ -150,12 +147,20 @@ function ProjectCard({ p }: { p: (typeof FEATURED)[number] }) {
           </div>
 
           <div className="mt-8 flex items-center gap-3">
-            <a href="#" className="inline-flex items-center gap-2 rounded-full border border-border bg-background/60 px-4 py-2 font-mono text-[11px] uppercase tracking-widest text-foreground hover:border-cyan/40 hover:text-cyan">
-              <Github className="h-3.5 w-3.5" /> Code
-            </a>
-            <a href="#" className={`inline-flex items-center gap-2 rounded-full ${TEXT_COLOR[p.color]} border border-current bg-current/10 px-4 py-2 font-mono text-[11px] uppercase tracking-widest hover:bg-current/20`}>
-              <ExternalLink className="h-3.5 w-3.5" /> Live
-            </a>
+            {/* @ts-ignore */}
+            {p.github && (
+              // @ts-ignore
+              <a href={p.github} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full border border-border bg-background/60 px-4 py-2 font-mono text-[11px] uppercase tracking-widest text-foreground hover:border-cyan/40 hover:text-cyan">
+                <Github className="h-3.5 w-3.5" /> Code
+              </a>
+            )}
+            {/* @ts-ignore */}
+            {p.live && (
+              // @ts-ignore
+              <a href={p.live} target="_blank" rel="noopener noreferrer" className={`inline-flex items-center gap-2 rounded-full ${TEXT_COLOR[p.color]} border border-current bg-current/10 px-4 py-2 font-mono text-[11px] uppercase tracking-widest hover:bg-current/20`}>
+                <ExternalLink className="h-3.5 w-3.5" /> Live
+              </a>
+            )}
           </div>
         </div>
 

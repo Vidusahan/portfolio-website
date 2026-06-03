@@ -9,7 +9,7 @@ export function Footer() {
           <div>
             <div className="font-mono text-sm">
               <span className="text-muted-foreground">{"{ "}</span>
-              <span className="text-foreground">alex.dev</span>
+              <span className="text-foreground">vidusahan.dev</span>
               <span className="cursor-blink text-cyan">_</span>
               <span className="text-muted-foreground">{" }"}</span>
             </div>
@@ -29,19 +29,23 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col gap-6 border-t border-border pt-8 md:flex-row md:items-center md:justify-between">
           <div className="flex flex-wrap gap-6 font-mono text-xs uppercase tracking-widest text-muted-foreground">
-            {["About", "Skills", "Projects", "Experience", "Contact"].map((l) => (
+            {["About", "Skills", "Projects", "Experience", "Education", "Contact"].map((l) => (
               <a key={l} href={`#${l.toLowerCase()}`} className="hover:text-cyan">{l}</a>
             ))}
           </div>
           <div className="flex items-center gap-5 text-muted-foreground">
-            {[Github, Linkedin, Twitter, Mail].map((Icon, i) => (
-              <a key={i} href="#" className="hover:text-cyan"><Icon className="h-4 w-4" /></a>
+            {[
+              { Icon: Github, href: "https://github.com/Vidusahan" },
+              { Icon: Linkedin, href: "https://linkedin.com/in/vidusahan-perera-9738681b1" },
+              { Icon: Mail, href: "mailto:vidusahanperera31@gmail.com" },
+            ].map(({ Icon, href }, i) => (
+              <a key={i} href={href} target={href.startsWith("http") ? "_blank" : undefined} rel={href.startsWith("http") ? "noopener noreferrer" : undefined} className="hover:text-cyan"><Icon className="h-4 w-4" /></a>
             ))}
           </div>
         </div>
 
         <div className="mt-8 font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
-          © 2025 Alex Morgan · Built with passion & coffee ☕
+          © 2025 Vidusahan Perera · Built with passion & coffee ☕
         </div>
       </div>
     </footer>

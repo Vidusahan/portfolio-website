@@ -112,7 +112,7 @@ export function Hero() {
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan opacity-75" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-cyan" />
           </span>
-          🤖 Open to Opportunities · 2025
+          📍 Jaela, Sri Lanka
         </div>
 
         {/* Name */}
@@ -145,9 +145,8 @@ export function Hero() {
             bootDone ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
-          Building intelligent systems that <span className="text-foreground">automate</span>,{" "}
-          <span className="text-foreground">scale</span>, and{" "}
-          <span className="text-foreground">evolve</span>.
+          Engineering intelligent systems that turn <span className="text-foreground">research</span> into{" "}
+          <span className="text-foreground">reality</span>.
         </p>
 
         {/* CTAs */}
@@ -181,12 +180,11 @@ export function Hero() {
           }`}
         >
           {[
-            { Icon: Github, href: "#" },
-            { Icon: Linkedin, href: "#" },
-            { Icon: Twitter, href: "#" },
-            { Icon: Mail, href: "#contact" },
+            { Icon: Github, href: "https://github.com/Vidusahan" },
+            { Icon: Linkedin, href: "https://linkedin.com/in/vidusahan-perera-9738681b1" },
+            { Icon: Mail, href: "mailto:vidusahanperera31@gmail.com" },
           ].map(({ Icon, href }, i) => (
-            <a key={i} href={href} className="text-muted-foreground transition-colors hover:text-cyan">
+            <a key={i} href={href} target={href.startsWith("http") ? "_blank" : undefined} rel={href.startsWith("http") ? "noopener noreferrer" : undefined} className="text-muted-foreground transition-colors hover:text-cyan">
               <Icon className="h-5 w-5" />
             </a>
           ))}

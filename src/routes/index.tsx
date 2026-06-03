@@ -8,22 +8,21 @@ import { About } from "@/components/About";
 import { Skills } from "@/components/Skills";
 import { Projects } from "@/components/Projects";
 import { Experience } from "@/components/Experience";
-import { Certifications } from "@/components/Certifications";
-import { Writing } from "@/components/Writing";
+import { Education } from "@/components/Education";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Alex Morgan — AI/ML Engineer · Agentic AI · MLOps" },
+      { title: "Vidusahan Perera — AI/ML Engineer" },
       {
         name: "description",
         content:
-          "Portfolio of Alex Morgan — AI/ML engineer building agentic systems, MLOps platforms, and cloud-native infrastructure that scales.",
+          "Portfolio of Vidusahan Perera — AI/ML engineer building agentic systems, MLOps platforms, and cloud-native infrastructure that scales.",
       },
-      { property: "og:title", content: "Alex Morgan — AI/ML · Agentic · MLOps" },
-      { property: "og:description", content: "Building intelligent systems that automate, scale, and evolve." },
+      { property: "og:title", content: "Vidusahan Perera — AI/ML Engineer" },
+      { property: "og:description", content: "Engineering intelligent systems that turn research into reality." },
       { property: "og:type", content: "website" },
     ],
   }),
@@ -43,8 +42,7 @@ function Index() {
         <Skills />
         <Projects />
         <Experience />
-        <Certifications />
-        <Writing />
+        <Education />
         <Contact />
       </main>
       <Footer />

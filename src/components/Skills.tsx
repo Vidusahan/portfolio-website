@@ -5,15 +5,12 @@ import { Brain, Bot, Workflow, Container, Cloud, Activity, Layout, Server, Datab
 import { useEffect, useRef, useState } from "react";
 
 const CATEGORIES = [
-  { n: "01", icon: Brain, title: "AI / ML", color: "cyan", level: 95, items: ["Python", "TensorFlow", "PyTorch", "Scikit-learn", "Hugging Face", "OpenAI API", "Keras"] },
-  { n: "02", icon: Bot, title: "Agentic AI", color: "violet", level: 92, items: ["LangChain", "LangGraph", "AutoGen", "CrewAI", "MCP", "RAG", "Pinecone", "Weaviate"] },
-  { n: "03", icon: Workflow, title: "Automation", color: "amber", level: 88, items: ["n8n", "Make", "Zapier", "Selenium", "Playwright", "Airflow"] },
-  { n: "04", icon: Container, title: "DevOps", color: "green", level: 90, items: ["Docker", "Kubernetes", "Helm", "GitHub Actions", "Jenkins", "Terraform", "Ansible"] },
-  { n: "05", icon: Cloud, title: "Cloud", color: "sky", level: 87, items: ["AWS EC2", "S3", "Lambda", "SageMaker", "GCP Vertex AI", "Azure ML"] },
-  { n: "06", icon: Activity, title: "MLOps", color: "pink", level: 91, items: ["MLflow", "DVC", "W&B", "BentoML", "FastAPI", "Kubeflow"] },
-  { n: "07", icon: Layout, title: "Frontend", color: "orange", level: 82, items: ["React", "Next.js", "TypeScript", "Tailwind", "Framer Motion"] },
-  { n: "08", icon: Server, title: "Backend", color: "teal", level: 89, items: ["Node.js", "FastAPI", "Django", "Flask", "GraphQL", "WebSockets", "Celery"] },
-  { n: "09", icon: Database, title: "Databases", color: "yellow", level: 86, items: ["PostgreSQL", "MongoDB", "Redis", "Pinecone", "Weaviate", "Supabase", "Elasticsearch"] },
+  { n: "01", icon: Brain, title: "AI / ML", color: "cyan", level: 85, items: ["Python", "Scikit-learn", "TensorFlow", "PyTorch", "Pandas", "NumPy", "Hugging Face", "OpenAI API", "Jupyter Notebook"] },
+  { n: "02", icon: Bot, title: "Agentic AI", color: "violet", level: 85, items: ["LangChain", "LangGraph", "RAG", "Vector Databases", "Pinecone", "Weaviate", "MCP", "Prompt Engineering"] },
+  { n: "03", icon: Workflow, title: "Automation", color: "amber", level: 80, items: ["n8n", "Zapier", "Make", "Selenium", "Playwright", "GitHub Actions", "Python Automation"] },
+  { n: "04", icon: Container, title: "DevOps", color: "green", level: 80, items: ["Docker", "Kubernetes", "Git", "GitHub Actions", "Linux", "Nginx", "Helm", "Terraform"] },
+  { n: "05", icon: Cloud, title: "Cloud", color: "sky", level: 75, items: ["AWS EC2", "AWS S3", "AWS Lambda", "AWS SageMaker", "Firebase", "Vercel", "Railway", "Render"] },
+  { n: "06", icon: Activity, title: "MLOps", color: "pink", level: 80, items: ["MLflow", "DVC", "Weights & Biases", "FastAPI", "Docker", "Model Serving", "CI/CD for ML"] },
 ];
 
 const COLOR_MAP: Record<string, { border: string; text: string; bg: string; shadow: string }> = {
@@ -58,8 +55,8 @@ export function Skills() {
       <div className="relative mx-auto max-w-[1400px] px-6 md:px-10">
         <SectionLabel
           number="02"
-          title="TECH ARSENAL"
-          kicker={<>Nine disciplines, one production-grade toolkit. From training notebooks to gigascale clusters.</>}
+          title="SKILLS / TECH STACK"
+          kicker={<>Building expertise across AI engineering, intelligent automation, and cloud-native systems. From machine learning experimentation to production-ready deployments.</>}
         />
 
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">

@@ -5,47 +5,52 @@ import { Reveal } from "./Reveal";
 
 const TIMELINE = [
   {
-    role: "Principal AI Engineer",
-    company: "Nebula Systems",
+    role: "Webmaster",
+    company: "IEEE CS Student Branch Chapter - USJ",
+    period: "2024 — 2025",
+    bullets: [
+      "Manage and maintain the chapter's digital platforms, ensuring performance, accessibility, and a seamless user experience.",
+      "Collaborate with executive committees to publish announcements, promote events, and strengthen the chapter's online presence.",
+      "Develop and implement web solutions that support chapter operations, member engagement, and organizational growth.",
+      "Contribute technical expertise to digital transformation initiatives and website enhancements."
+    ],
+    stack: ["Web Development", "WordPress", "UI/UX", "Project Management", "Digital Strategy"],
+  },
+  {
+    role: "Active Member & Student Leader",
+    company: "IEEE Student Branch - USJ",
     period: "2023 — Present",
     bullets: [
-      "Architected multi-agent LLM platform serving 500k requests/day across 12 tools",
-      "Designed GitOps-native MLOps stack: cut model deploy cycle 5d → 4h",
-      "Led platform team of 6 engineers across AI, infra, and DevEx",
+      "Contributed to the planning, promotion, and execution of multiple IEEE events and initiatives.",
+      "Collaborated with cross-functional teams in marketing, communications, and event management.",
+      "Supported student engagement programs that increased awareness of IEEE activities and opportunities.",
+      "Recognized for outstanding volunteer contributions and commitment to the student community."
     ],
-    stack: ["LangGraph", "Kubernetes", "Terraform", "MLflow"],
+    stack: ["Leadership", "Teamwork", "Event Management", "Community Building"],
   },
   {
-    role: "Senior MLOps Engineer",
-    company: "Helios Labs",
-    period: "2021 — 2023",
+    role: "IEEEXtreme 18.0 Student Ambassador",
+    company: "IEEE Student Branch - USJ",
+    period: "2024",
     bullets: [
-      "Built feature store + training pipeline serving 80 production models",
-      "Reduced GPU compute spend by $1.2M with autoscaling Kubernetes operator",
-      "Shipped real-time drift monitoring framework now used company-wide",
+      "Served as the primary liaison between IEEE headquarters and the university student community.",
+      "Led awareness campaigns, information sessions, and promotional activities to increase participation.",
+      "Guided participants through registration, team formation, and competition preparation.",
+      "Supported the organization of mock contests and preparatory workshops for competitors."
     ],
-    stack: ["Airflow", "MLflow", "FastAPI", "AWS SageMaker"],
+    stack: ["Leadership", "Public Speaking", "Marketing", "Community Engagement"],
   },
   {
-    role: "Cloud / DevOps Engineer",
-    company: "Quanta IO",
-    period: "2019 — 2021",
+    role: "Design & Marketing Head — J'pura Xtreme 1.0",
+    company: "IEEE Student Branch - USJ",
+    period: "2024",
     bullets: [
-      "Migrated monolith to microservices on EKS, zero downtime",
-      "Authored Terraform modules adopted across 8 product teams",
-      "Implemented blue/green CI/CD with GitHub Actions + ArgoCD",
+      "Led the overall branding and marketing strategy for the university's flagship competitive programming event.",
+      "Designed event identity assets, promotional materials, certificates, and social media campaigns.",
+      "Coordinated outreach initiatives that increased event visibility and participant engagement.",
+      "Worked closely with organizing committees to ensure consistent branding and successful promotion."
     ],
-    stack: ["AWS", "Terraform", "Docker", "ArgoCD"],
-  },
-  {
-    role: "ML Engineer",
-    company: "Datafold Research",
-    period: "2018 — 2019",
-    bullets: [
-      "Trained NLP classifiers serving real-time sentiment scoring",
-      "Productionized first model behind FastAPI + Redis caching layer",
-    ],
-    stack: ["PyTorch", "FastAPI", "Redis"],
+    stack: ["Graphic Design", "Marketing", "Branding", "Leadership"],
   },
 ];
 
@@ -72,7 +77,7 @@ export function Experience() {
   return (
     <section id="experience" className="relative py-32">
       <div className="relative mx-auto max-w-[1400px] px-6 md:px-10">
-        <SectionLabel number="04" title="EXPERIENCE" kicker={<>Seven years compounding across AI, infra, and platform.</>} />
+        <SectionLabel number="04" title="EXPERIENCE" kicker={<>Leadership, community building, and technical contributions through IEEE initiatives, student engagement, and digital innovation.</>} />
 
         <div ref={wrapRef} className="relative">
           {/* Timeline line */}
